@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import { addItem } from '../../redux/cart/cart.actions';
 
-
 import {
   CollectionItemContainer,
   Image,
@@ -21,7 +20,7 @@ const CollectionItem = ({ item, addItem }) => {
       <Image style={{ backgroundImage: `url(${imageUrl})` }} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
-        <PriceContainer>{`$${price.toFixed(2)}`}</PriceContainer>
+        <PriceContainer>{`$${price}`}</PriceContainer>
       </CollectionFooterContainer>
       <Button onClick={() => addItem(item)} inverted>
         ADD TO CART
